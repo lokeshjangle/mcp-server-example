@@ -83,6 +83,22 @@ Add to your `.kiro/settings/mcp.json`:
 }
 ```
 
+### Using uvx from GitHub (no local clone needed)
+
+```json
+{
+  "mcpServers": {
+    "demo-server": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/lokeshjangle/mcp-server-example.git", "mcp-server"],
+      "autoApprove": ["*"]
+    }
+  }
+}
+```
+
+This installs and runs the server directly from the GitHub repository without needing to clone it locally.
+
 ### Claude Desktop
 
 Add to your Claude Desktop config (`claude_desktop_config.json`):
@@ -135,3 +151,4 @@ npx @modelcontextprotocol/inspector uv run mcp-server
 ## License
 
 This project is for learning and demonstration purposes.
+>
